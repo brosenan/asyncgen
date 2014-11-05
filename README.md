@@ -13,12 +13,12 @@ Installing
 
 Or allternatively,
 
-   # npm install --save asyncgen
-   # cd node_modules/asyncgen
-   # npm test
+    # npm install --save asyncgen
+    # cd node_modules/asyncgen
+    # npm test
 
 Be sure you are using a compatible node version.  For example:
-   # nvm use 0.11
+    # nvm use 0.11
 
 What gives?
 -----------

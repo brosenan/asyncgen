@@ -1,6 +1,6 @@
 {
   "name": "asyncgen",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "A support library for using es6 generators for asynchronous computations. This requires node >=0.11.2 and the --harmony flag enabled.",
   "main": "async.js",
   "scripts": {
