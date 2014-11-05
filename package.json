@@ -1,0 +1,15 @@
+{
+  "name": "asyncgen",
+  "version": "1.0.0",
+  "description": "A support library for using es6 generators for asynchronous computations. This requires node >=0.11.2 and the --harmony flag enabled.",
+  "main": "async.js",
+  "scripts": {
+    "test": "./node_modules/mocha/bin/mocha -C -R dot --harmony"
+  },
+  "author": "Boaz Rosenan <brosenan@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "mocha": "^2.0.1"
+  },
+  "engine": "node >= 0.11.2"
+}
