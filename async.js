@@ -26,3 +26,8 @@ exports.run = function(func, cb) {
     }
 };
 
+exports.async = function(genfunc) {
+    return function(cb) {
+	exports.run(genfunc, cb);
+    };
+};

@@ -48,7 +48,7 @@ describe('async', function(){
 	var readFile = async.thunkify(fs.readFile);
 	async.run(function*() {
 	    try{
-		var content = yield readFile('fileThatDoesNotExist.txt');
+		var content = yield readFile('fileThatDoesNotExist.txt', 'utf-8');
 	    } catch(e) {
 		throw e;
 	    }
@@ -61,5 +61,24 @@ describe('async', function(){
 	    }
 	});
     });
+
+    describe('.async(genfunc)', function(){
+	it('should return an asynchronous function executing the generator', function(done){
+	    var fs = require('fs');
+	    var readFile = async.thunkify(fs.readFile);
+	    function* readFirstLine() {
+		var content = yield readFile(__dirname + '/async-test.js', 'utf-8');
+		return content.split('\n')[0];
+	    }
+	    var readFirstLineAsync = async.async(readFirstLine);
+	    readFirstLineAsync(function(err, line) {
+		assert.ifError(err);
+		assert.equal(line, '// This comment is at the beginning of this file');
+		done();
+	    })
+	});
+
+    });
+
 
 });

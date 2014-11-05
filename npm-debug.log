@@ -1,0 +1,107 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/home/boaz/.nvm/v0.11.14/bin/node',
+1 verbose cli   '/home/boaz/.nvm/v0.11.14/bin/npm',
+1 verbose cli   'publish' ]
+2 info using npm@2.0.0
+3 info using node@v0.11.14
+4 verbose publish [ '.' ]
+5 verbose cache add [ '.', null ]
+6 verbose cache add spec="." args=[".",null]
+7 verbose parsed spec { raw: '.',
+7 verbose parsed spec   scope: null,
+7 verbose parsed spec   name: null,
+7 verbose parsed spec   rawSpec: '.',
+7 verbose parsed spec   spec: '/home/boaz/asyncgen',
+7 verbose parsed spec   type: 'local' }
+8 verbose cache add local package /home/boaz/asyncgen
+9 silly lockFile 3a52ce78- .
+10 verbose lock . /home/boaz/.npm/3a52ce78-.lock
+11 verbose tar pack [ '/home/boaz/.npm/asyncgen/1.0.0/package.tgz', '.' ]
+12 verbose tarball /home/boaz/.npm/asyncgen/1.0.0/package.tgz
+13 verbose folder .
+14 info prepublish asyncgen@1.0.0
+15 silly lockFile 1f1177db-tar tar://.
+16 verbose lock tar://. /home/boaz/.npm/1f1177db-tar.lock
+17 silly lockFile 5d083a5b-z-npm-asyncgen-1-0-0-package-tgz tar:///home/boaz/.npm/asyncgen/1.0.0/package.tgz
+18 verbose lock tar:///home/boaz/.npm/asyncgen/1.0.0/package.tgz /home/boaz/.npm/5d083a5b-z-npm-asyncgen-1-0-0-package-tgz.lock
+19 silly lockFile 1f1177db-tar tar://.
+20 silly lockFile 1f1177db-tar tar://.
+21 silly lockFile 5d083a5b-z-npm-asyncgen-1-0-0-package-tgz tar:///home/boaz/.npm/asyncgen/1.0.0/package.tgz
+22 silly lockFile 5d083a5b-z-npm-asyncgen-1-0-0-package-tgz tar:///home/boaz/.npm/asyncgen/1.0.0/package.tgz
+23 silly lockFile c2b4bc5c--boaz-npm-asyncgen-1-0-0-package /home/boaz/.npm/asyncgen/1.0.0/package
+24 verbose lock /home/boaz/.npm/asyncgen/1.0.0/package /home/boaz/.npm/c2b4bc5c--boaz-npm-asyncgen-1-0-0-package.lock
+25 silly lockFile c2b4bc5c--boaz-npm-asyncgen-1-0-0-package /home/boaz/.npm/asyncgen/1.0.0/package
+26 silly lockFile c2b4bc5c--boaz-npm-asyncgen-1-0-0-package /home/boaz/.npm/asyncgen/1.0.0/package
+27 silly lockFile 3a52ce78- .
+28 silly lockFile 3a52ce78- .
+29 silly publish { name: 'asyncgen',
+29 silly publish   version: '1.0.0',
+29 silly publish   description: 'A support library for using es6 generators for asynchronous computations. This requires node >=0.11.2 and the --harmony flag enabled.',
+29 silly publish   main: 'async.js',
+29 silly publish   scripts: { test: './node_modules/mocha/bin/mocha -C -R dot --harmony' },
+29 silly publish   repository: { type: 'git', url: 'https://github.com/brosenan/asyncgen.git' },
+29 silly publish   author: { name: 'Boaz Rosenan', email: 'brosenan@gmail.com' },
+29 silly publish   license: 'MIT',
+29 silly publish   devDependencies: { mocha: '^2.0.1' },
+29 silly publish   engine: 'node >= 0.11.2',
+29 silly publish   readme: 'asyncgen\n========\n\nA support library for using es6 generators for asynchronous computations. This requires node >=0.11.2 and the --harmony flag enabled.\n\n\nInstalling\n----------\n    # git clone git@github.com:brosenan/asyncgen.git\n    # cd asyncgen\n    # npm install\n    # npm test\n\nOr allternatively,\n\n   # npm install --save asyncgen\n   # cd node_modules/asyncgen\n   # npm test\n\nBe sure you are using a compatible node version.  For example:\n   # nvm use 0.11\n\nWhat gives?\n-----------\nSee [the spec](spec.md).\n',
+29 silly publish   readmeFilename: 'README.md',
+29 silly publish   gitHead: 'dd62dbc173091657484e1c4f21e997fcc62fa0f9',
+29 silly publish   bugs: { url: 'https://github.com/brosenan/asyncgen/issues' },
+29 silly publish   homepage: 'https://github.com/brosenan/asyncgen',
+29 silly publish   _id: 'asyncgen@1.0.0',
+29 silly publish   _shasum: 'd43de7c89444a55eb403a87ac5bf4f359e919cd2',
+29 silly publish   _from: '.' }
+30 verbose mapToRegistry name asyncgen
+31 verbose mapToRegistry uri https://registry.npmjs.org/asyncgen
+32 verbose publish registryBase https://registry.npmjs.org/
+33 verbose request on initialization, where is /asyncgen
+34 verbose request after pass 1, where is /asyncgen
+35 verbose request url raw /asyncgen
+36 verbose request resolving registry [ 'https://registry.npmjs.org/', './asyncgen' ]
+37 verbose request after pass 2, where is https://registry.npmjs.org/asyncgen
+38 verbose request sending authorization for write operation
+39 info attempt registry request try #1 at 11:44:56
+40 verbose request id acedfe5ac30f6fc1
+41 http request PUT https://registry.npmjs.org/asyncgen
+42 http 403 https://registry.npmjs.org/asyncgen
+43 verbose headers { date: 'Wed, 05 Nov 2014 09:44:56 GMT',
+43 verbose headers   server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+43 verbose headers   'content-type': 'application/json',
+43 verbose headers   'cache-control': 'max-age=60',
+43 verbose headers   'content-length': '2867',
+43 verbose headers   'accept-ranges': 'bytes',
+43 verbose headers   via: '1.1 varnish',
+43 verbose headers   'x-served-by': 'cache-ams4140-AMS',
+43 verbose headers   'x-cache': 'MISS',
+43 verbose headers   'x-cache-hits': '0',
+43 verbose headers   'x-timer': 'S1415180696.096515,VS0,VE616',
+43 verbose headers   connection: 'close' }
+44 error publish Failed PUT 403
+45 verbose stack Error: forbidden cannot modify pre-existing version: 1.0.0
+45 verbose stack old={"name":"asyncgen","version":"1.0.0","description":"A support library for using es6 generators for asynchronous computations. This requires node >=0.11.2 and the --harmony flag enabled.","main":"async.js","scripts":{"test":"./node_modules/mocha/bin/mocha -C -R dot --harmony"},"author":{"name":"Boaz Rosenan","email":"brosenan@gmail.com"},"license":"MIT","devDependencies":{"mocha":"^2.0.1"},"engine":"node >= 0.11.2","gitHead":"9a3a6c1e43ed0b70ff3a9f035aacf9fd24cdc5c5","_id":"asyncgen@1.0.0","_shasum":"922f6f7dd6dd0b80f76e78c23f8ee433d43092ad","_from":".","_npmVersion":"2.0.0","_npmUser":{"name":"brosenan","email":"brosenan@gmail.com"},"maintainers":[{"name":"brosenan","email":"brosenan@gmail.com"}],"dist":{"shasum":"922f6f7dd6dd0b80f76e78c23f8ee433d43092ad","tarball":"http://registry.npmjs.org/asyncgen/-/asyncgen-1.0.0.tgz"}}
+45 verbose stack new={"name":"asyncgen","version":"1.0.0","description":"A support library for using es6 generators for asynchronous computations. This requires node >=0.11.2 and the --harmony flag enabled.","main":"async.js","scripts":{"test":"./node_modules/mocha/bin/mocha -C -R dot --harmony"},"repository":{"type":"git","url":"https://github.com/brosenan/asyncgen.git"},"author":{"name":"Boaz Rosenan","email":"brosenan@gmail.com"},"license":"MIT","devDependencies":{"mocha":"^2.0.1"},"engine":"node >= 0.11.2","readme":"asyncgen\u000a========\u000a\u000aA support library for using es6 generators for asynchronous computations. This requires node >=0.11.2 and the --harmony flag enabled.\u000a\u000a\u000aInstalling\u000a----------\u000a    # git clone git@github.com:brosenan/asyncgen.git\u000a    # cd asyncgen\u000a    # npm install\u000a    # npm test\u000a\u000aOr allternatively,\u000a\u000a   # npm install --save asyncgen\u000a   # cd node_modules/asyncgen\u000a   # npm test\u000a\u000aBe sure you are using a compatible node version.  For example:\u000a   # nvm use 0.11\u000a\u000aWhat gives?\u000a-----------\u000aSee [the spec](spec.md).\u000a","readmeFilename":"README.md","gitHead":"dd62dbc173091657484e1c4f21e997fcc62fa0f9","bugs":{"url":"https://github.com/brosenan/asyncgen/issues"},"homepage":"https://github.com/brosenan/asyncgen","_id":"asyncgen@1.0.0","_shasum":"d43de7c89444a55eb403a87ac5bf4f359e919cd2","_from":".","_npmVersion":"2.0.0","_npmUser":{"name":"brosenan","email":"brosenan@gmail.com"},"maintainers":[{"name":"brosenan","email":"brosenan@gmail.com"}],"dist":{"shasum":"d43de7c89444a55eb403a87ac5bf4f359e919cd2","tarball":"http://registry.npmjs.org/asyncgen/-/asyncgen-1.0.0.tgz"}}: asyncgen
+45 verbose stack     at RegClient.<anonymous> (/home/boaz/.nvm/v0.11.14/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:261:14)
+45 verbose stack     at Request._callback (/home/boaz/.nvm/v0.11.14/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:198:65)
+45 verbose stack     at Request.self.callback (/home/boaz/.nvm/v0.11.14/lib/node_modules/npm/node_modules/request/request.js:236:22)
+45 verbose stack     at Request.emit (events.js:110:17)
+45 verbose stack     at Request.<anonymous> (/home/boaz/.nvm/v0.11.14/lib/node_modules/npm/node_modules/request/request.js:1142:14)
+45 verbose stack     at Request.emit (events.js:129:20)
+45 verbose stack     at IncomingMessage.<anonymous> (/home/boaz/.nvm/v0.11.14/lib/node_modules/npm/node_modules/request/request.js:1096:12)
+45 verbose stack     at IncomingMessage.emit (events.js:129:20)
+45 verbose stack     at _stream_readable.js:907:16
+45 verbose stack     at process._tickCallback (node.js:372:11)
+46 verbose statusCode 403
+47 verbose pkgid asyncgen
+48 verbose cwd /home/boaz/asyncgen
+49 error Linux 3.13.0-37-generic
+50 error argv "/home/boaz/.nvm/v0.11.14/bin/node" "/home/boaz/.nvm/v0.11.14/bin/npm" "publish"
+51 error node v0.11.14
+52 error npm  v2.0.0
+53 error code E403
+54 error forbidden cannot modify pre-existing version: 1.0.0
+54 error old={"name":"asyncgen","version":"1.0.0","description":"A support library for using es6 generators for asynchronous computations. This requires node >=0.11.2 and the --harmony flag enabled.","main":"async.js","scripts":{"test":"./node_modules/mocha/bin/mocha -C -R dot --harmony"},"author":{"name":"Boaz Rosenan","email":"brosenan@gmail.com"},"license":"MIT","devDependencies":{"mocha":"^2.0.1"},"engine":"node >= 0.11.2","gitHead":"9a3a6c1e43ed0b70ff3a9f035aacf9fd24cdc5c5","_id":"asyncgen@1.0.0","_shasum":"922f6f7dd6dd0b80f76e78c23f8ee433d43092ad","_from":".","_npmVersion":"2.0.0","_npmUser":{"name":"brosenan","email":"brosenan@gmail.com"},"maintainers":[{"name":"brosenan","email":"brosenan@gmail.com"}],"dist":{"shasum":"922f6f7dd6dd0b80f76e78c23f8ee433d43092ad","tarball":"http://registry.npmjs.org/asyncgen/-/asyncgen-1.0.0.tgz"}}
+54 error new={"name":"asyncgen","version":"1.0.0","description":"A support library for using es6 generators for asynchronous computations. This requires node >=0.11.2 and the --harmony flag enabled.","main":"async.js","scripts":{"test":"./node_modules/mocha/bin/mocha -C -R dot --harmony"},"repository":{"type":"git","url":"https://github.com/brosenan/asyncgen.git"},"author":{"name":"Boaz Rosenan","email":"brosenan@gmail.com"},"license":"MIT","devDependencies":{"mocha":"^2.0.1"},"engine":"node >= 0.11.2","readme":"asyncgen\u000a========\u000a\u000aA support library for using es6 generators for asynchronous computations. This requires node >=0.11.2 and the --harmony flag enabled.\u000a\u000a\u000aInstalling\u000a----------\u000a    # git clone git@github.com:brosenan/asyncgen.git\u000a    # cd asyncgen\u000a    # npm install\u000a    # npm test\u000a\u000aOr allternatively,\u000a\u000a   # npm install --save asyncgen\u000a   # cd node_modules/asyncgen\u000a   # npm test\u000a\u000aBe sure you are using a compatible node version.  For example:\u000a   # nvm use 0.11\u000a\u000aWhat gives?\u000a-----------\u000aSee [the spec](spec.md).\u000a","readmeFilename":"README.md","gitHead":"dd62dbc173091657484e1c4f21e997fcc62fa0f9","bugs":{"url":"https://github.com/brosenan/asyncgen/issues"},"homepage":"https://github.com/brosenan/asyncgen","_id":"asyncgen@1.0.0","_shasum":"d43de7c89444a55eb403a87ac5bf4f359e919cd2","_from":".","_npmVersion":"2.0.0","_npmUser":{"name":"brosenan","email":"brosenan@gmail.com"},"maintainers":[{"name":"brosenan","email":"brosenan@gmail.com"}],"dist":{"shasum":"d43de7c89444a55eb403a87ac5bf4f359e919cd2","tarball":"http://registry.npmjs.org/asyncgen/-/asyncgen-1.0.0.tgz"}}: asyncgen
+55 error If you need help, you may report this error at:
+55 error     <http://github.com/npm/npm/issues>
+56 verbose exit [ 1, true ]
