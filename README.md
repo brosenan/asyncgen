@@ -11,6 +11,15 @@ Installing
     # npm install
     # npm test
 
+Or allternatively,
+
+   # npm install --save asyncgen
+   # cd node_modules/asyncgen
+   # npm test
+
+Be sure you are using a compatible node version.  For example:
+   # nvm use 0.11
+
 What gives?
 -----------
 See [the spec](spec.md).

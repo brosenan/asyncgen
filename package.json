@@ -6,6 +6,10 @@
   "scripts": {
     "test": "./node_modules/mocha/bin/mocha -C -R dot --harmony"
   },
+  "repository" : {
+    "type" : "git",
+    "url" : "https://github.com/brosenan/asyncgen.git"
+  },
   "author": "Boaz Rosenan <brosenan@gmail.com>",
   "license": "MIT",
   "devDependencies": {
