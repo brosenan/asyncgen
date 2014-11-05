@@ -1,0 +1,14 @@
+
+    async should allow "standard" functions to be yielded
+  ․ async should allow "standard" functions to be yielded
+    async should propagate errors to the generator function
+  ․ async should propagate errors to the generator function
+    async should propagate exceptions unhandled by the generator function to the run callback
+  ․ async should propagate exceptions unhandled by the generator function to the run callback
+    async should propagate exceptions unhandled by the generator function to the run callback
+  ․ async should propagate exceptions unhandled by the generator function to the run callback
+    yield should support es6 generators
+  ․ yield should support es6 generators
+
+  5 passing (15ms)
+
