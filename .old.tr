@@ -9,8 +9,10 @@
   ․ async should propagate exceptions unhandled by the generator function to the run callback
     async .async(genfunc) should return an asynchronous function executing the generator
   ․ async .async(genfunc) should return an asynchronous function executing the generator
+    async .async(genfunc) should return a function whos toString() method returns the code of the generator function
+  ․ async .async(genfunc) should return a function whos toString() method returns the code of the generator function
     yield should support es6 generators
   ․ yield should support es6 generators
 
-  6 passing (18ms)
+  7 passing (13ms)
 

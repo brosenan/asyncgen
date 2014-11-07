@@ -27,7 +27,9 @@ exports.run = function(func, cb) {
 };
 
 exports.async = function(genfunc) {
-    return function(cb) {
+    var resfunc =  function(cb) {
 	exports.run(genfunc, cb);
     };
+    resfunc.toString = function() { return genfunc.toString(); };
+    return resfunc;
 };

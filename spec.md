@@ -93,6 +93,14 @@ readFirstLineAsync(function(err, line) {
 })
 ```
 
+should return a function whos toString() method returns the code of the generator function.
+
+```js
+function* foo() { return "hello"; }
+var asyncfunc = async.async(foo);
+assert.equal(asyncfunc.toString(), foo.toString());
+```
+
 <a name="yield"></a>
 # yield
 should support es6 generators.

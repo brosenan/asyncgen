@@ -77,6 +77,11 @@ describe('async', function(){
 		done();
 	    })
 	});
+	it('should return a function whos toString() method returns the code of the generator function', function(){
+	    function* foo() { return "hello"; }
+	    var asyncfunc = async.async(foo);
+	    assert.equal(asyncfunc.toString(), foo.toString());
+	});
 
     });
 
