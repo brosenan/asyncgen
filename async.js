@@ -10,6 +10,10 @@ exports.thunkify = function(func) {
 
 exports.run = function(func, cb) {
     var gen = func();
+    execute(gen, cb);
+};
+
+function execute(gen, cb) {
     next();
 
     function next(err, val) {
@@ -24,7 +28,7 @@ exports.run = function(func, cb) {
 	    return cb(e);
 	}
     }
-};
+}
 
 exports.async = function(genfunc) {
     var resfunc =  function(cb) {
@@ -32,4 +36,30 @@ exports.async = function(genfunc) {
     };
     resfunc.toString = function() { return genfunc.toString(); };
     return resfunc;
+};
+
+exports.parallel = function*(generators) {
+    var i;
+    var count = generators.length;
+    var res = new Array(generators.length);
+
+    function handler(i, cb) {
+	return function(err, value) {
+	    if(err) {
+		return cb(err);
+	    }
+	    res[i] = value;
+	    count -= 1;
+	    if(count === 0) {
+		cb();
+	    }
+	};
+    }
+    
+    yield function(_) {
+	for(i = 0; i < generators.length; i++) {
+	    execute(generators[i], handler(i, _));
+	}
+    };
+    return res;
 };

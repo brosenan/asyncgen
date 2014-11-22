@@ -1,18 +1,26 @@
 
-    async should allow "standard" functions to be yielded
-  ․ async should allow "standard" functions to be yielded
-    async should propagate errors to the generator function
-  ․ async should propagate errors to the generator function
-    async should propagate exceptions unhandled by the generator function to the run callback
-  ․ async should propagate exceptions unhandled by the generator function to the run callback
-    async should propagate exceptions unhandled by the generator function to the run callback
-  ․ async should propagate exceptions unhandled by the generator function to the run callback
-    async .async(genfunc) should return an asynchronous function executing the generator
-  ․ async .async(genfunc) should return an asynchronous function executing the generator
-    async .async(genfunc) should return a function whos toString() method returns the code of the generator function
-  ․ async .async(genfunc) should return a function whos toString() method returns the code of the generator function
+    asyncgen should allow "standard" functions to be yielded
+  ․ asyncgen should allow "standard" functions to be yielded
+    asyncgen should propagate errors to the generator function
+  ․ asyncgen should propagate errors to the generator function
+    asyncgen should propagate exceptions unhandled by the generator function to the run callback
+  ․ asyncgen should propagate exceptions unhandled by the generator function to the run callback
+    asyncgen should propagate exceptions unhandled by the generator function to the run callback
+  ․ asyncgen should propagate exceptions unhandled by the generator function to the run callback
+    asyncgen .async(genfunc) should return an asynchronous function executing the generator
+  ․ asyncgen .async(genfunc) should return an asynchronous function executing the generator
+    asyncgen .async(genfunc) should return a function whos toString() method returns the code of the generator function
+  ․ asyncgen .async(genfunc) should return a function whos toString() method returns the code of the generator function
+    asyncgen .parallel(generators) should execute the given generator functions
+  ․ asyncgen .parallel(generators) should execute the given generator functions
+    asyncgen .parallel(generators) should run the given generator in parallel
+  ․ asyncgen .parallel(generators) should run the given generator in parallel
+    asyncgen .parallel(generators) should return an array containing the generators respective return values
+  ․ asyncgen .parallel(generators) should return an array containing the generators respective return values
+    asyncgen .parallel(generators) should propagate the exception if one of the generators throws
+  ․ asyncgen .parallel(generators) should propagate the exception if one of the generators throws
     yield should support es6 generators
   ․ yield should support es6 generators
 
-  7 passing (13ms)
+  11 passing (24ms)
 
