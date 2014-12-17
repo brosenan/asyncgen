@@ -30,6 +30,8 @@ function execute(gen, cb) {
     }
 }
 
+exports.execute = execute;
+
 exports.async = function(genfunc) {
     var resfunc =  function(cb) {
 	exports.run(genfunc, cb);
