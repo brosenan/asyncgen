@@ -2,6 +2,7 @@
    - [asyncgen](#asyncgen)
      - [.async(genfunc)](#asyncgen-asyncgenfunc)
      - [.parallel(generators)](#asyncgen-parallelgenerators)
+     - [.runSync(gen)](#asyncgen-runsyncgen)
    - [yield](#yield)
 <a name=""></a>
  
@@ -170,6 +171,67 @@ function* (){
 		    throw e;
 		}
 	    }
+```
+
+<a name="asyncgen-runsyncgen"></a>
+## .runSync(gen)
+should run the given generator.
+
+```js
+var called = false;
+var res = asyncgen.runSync(function*() {
+		called = true;
+		return 42;
+});
+assert(called, 'should be called');
+assert.equal(res, 42);
+```
+
+should throw an exception if the generator attempts to yield a thunk.
+
+```js
+var res = asyncgen.runSync(function*() {
+		try {
+		    yield function(_) {
+			setTimeout(_, 1);
+		    };
+		    assert(false, 'the previous statement should fail');
+		} catch(e) {
+		    if(e.message === 'Attempt to perform an asynchroneous operation from runSync()') {
+			return 56;
+		    } else {
+			throw e;
+		    }
+		}
+});
+assert.equal(res, 56);
+```
+
+should throw the  exception repeatedly in case of a repeating attempt.
+
+```js
+var res = asyncgen.runSync(function*() {
+		try {
+		    yield function(_) {
+			setTimeout(_, 1);
+		    };
+		} catch(e) {
+		    if(e.message !== 'Attempt to perform an asynchroneous operation from runSync()') {
+			throw e;
+		    }
+		}
+		try {
+		    yield function(_) {
+			setTimeout(_, 1);
+		    };
+		} catch(e) {
+		    if(e.message !== 'Attempt to perform an asynchroneous operation from runSync()') {
+			throw e;
+		    }
+		}
+		return 22;
+});
+assert.equal(res, 22);
 ```
 
 <a name="yield"></a>

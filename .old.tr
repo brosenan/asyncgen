@@ -14,13 +14,19 @@
     asyncgen .parallel(generators) should execute the given generator functions
   ․ asyncgen .parallel(generators) should execute the given generator functions
     asyncgen .parallel(generators) should run the given generator in parallel
-  ․ asyncgen .parallel(generators) should run the given generator in parallel
+  1) asyncgen .parallel(generators) should run the given generator in parallel
     asyncgen .parallel(generators) should return an array containing the generators respective return values
   ․ asyncgen .parallel(generators) should return an array containing the generators respective return values
     asyncgen .parallel(generators) should propagate the exception if one of the generators throws
   ․ asyncgen .parallel(generators) should propagate the exception if one of the generators throws
+    asyncgen .runSync(gen) should run the given generator
+  ․ asyncgen .runSync(gen) should run the given generator
+    asyncgen .runSync(gen) should throw an exception if the generator attempts to yield a thunk
+  ․ asyncgen .runSync(gen) should throw an exception if the generator attempts to yield a thunk
+    asyncgen .runSync(gen) should throw the  exception repeatedly in case of a repeating attempt
+  ․ asyncgen .runSync(gen) should throw the  exception repeatedly in case of a repeating attempt
     yield should support es6 generators
   ․ yield should support es6 generators
 
-  11 passing (24ms)
+  13 passing (47ms)
 

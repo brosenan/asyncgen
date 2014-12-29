@@ -65,3 +65,12 @@ exports.parallel = function*(generators) {
     };
     return res;
 };
+
+exports.runSync = function(func) {
+    var gen = func();
+    var first = gen.next();
+    while(!first.done) {
+	first = gen.throw(Error('Attempt to perform an asynchroneous operation from runSync()'));
+    }
+    return first.value;
+};
